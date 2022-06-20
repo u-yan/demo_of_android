@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TitleLayout">
+        <attr name="back" format="string">
+        </attr>
+
+    </declare-styleable>
+    <declare-styleable name="DolphinButton">
+        <attr name="dolphinButtonType" format="enum">
+            <enum name="surface" value="1" />
+            <enum name="outline" value="2" />
+        </attr>
+        <attr name="dolphinButtonLevel" format="enum">
+            <enum name="primary" value="1" />
+            <enum name="secondary" value="2" />
+        </attr>
+        <attr name="dolphinButtonScene" format="enum">
+            <enum name="light" value="1" />
+            <enum name="dark" value="2" />
+        </attr>
+        <attr name="dolphinButtonSize" format="enum">
+            <enum name="xs" value="1" />
+            <enum name="s" value="2" />
+            <enum name="m" value="3" />
+            <enum name="l" value="4" />
+            <enum name="xl" value="5" />
+            <enum name="xxl" value="6" />
+        </attr>
+        <attr name="dolphinButtonState" format="enum">
+            <enum name="normal" value="1" />
+            <enum name="press" value="2" />
+            <enum name="disable" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="DolphinTextView">
+        <attr name="dolphinText" format="string"/>
+        <attr name="dolphinLineHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="DolphinDot">
+        <attr name="dolphinDotUseBorder" format="boolean"/>
+        <attr name="dolphinDotSize" format="enum">
+            <enum name="s" value="1"/>
+            <enum name="m" value="2"/>
+            <enum name="l" value="3"/>
+            <enum name="xl" value="4"/>
+            <enum name="xxl" value="5"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="DolphinBubble">
+        <!--气泡内容-->
+        <attr name="bubbleContent" format="string" />
+        <!--气泡布局-->
+        <attr name="bubbleShowType" format="enum">
+            <enum name="NORMAL" value="0" />
+            <enum name="WITHITEM" value="1" />
+        </attr>
+        <!--图片-->
+        <attr name="bubbleImageUrl" format="string|reference" />
+        <!--按钮文案-->
+        <attr name="bubbleButtonText" format="string|reference" />
+        <!--箭头位置-->
+        <attr name="bubbleArrowOrientation" format="enum">
+            <enum name="LEFT" value="0" />
+            <enum name="TOP" value="1" />
+            <enum name="RIGHT" value="2" />
+            <enum name="BOTTOM" value="3" />
+        </attr>
+        <!--箭头距离-->
+        <attr name="bubbleArrowPosition" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="MaxWidthLinearLayout">
+        <attr name="maxWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="BubbleShadowLayout">
+        <attr name="lookAt">
+            <enum name="left" value="0" />
+            <enum name="top" value="1" />
+            <enum name="right" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
+
+        <attr name="arrowPosition" format="dimension" />
+        <attr name="arrowWidth" format="dimension" />
+        <attr name="arrowLength" format="dimension" />
+        <attr name="bubbleColor" format="color" />
+        <attr name="bubbleHeight" format="dimension" />
+        <attr name="bubbleMaxWidth" format="dimension" />
+        <attr name="bubbleRadius" format="dimension" />
+
+        <attr name="bubblePadding" format="dimension" />
+        <attr name="shadowRadius" format="dimension" />
+        <attr name="shadowX" format="dimension" />
+        <attr name="shadowY" format="dimension" />
+        <attr name="shadowColor" format="color" />
+
+        <attr name="bubbleBorderColor" format="color" />
+        <attr name="bubbleBorderSize" format="dimension" />
+        <attr name="arrowAutoCenter" format="boolean" />
+        <attr name="safeArrowPosition" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="DolphinEmpty">
+        <!--标题文案-->
+        <attr name="dolphinEmptyTitle" format="string"/>
+        <!--正文文案-->
+        <attr name="dolphinEmptyContent" format="string"/>
+        <!--按钮文案-->
+        <attr name="dolphinEmptyButtonContent" format="string"/>
+
+        <attr name="dolphinEmptyImageType" format="enum" >
+            <enum name="cm_empty_wuzoupin" value="1" />
+            <enum name="cm_empty_yunpan" value="2" />
+            <enum name="cm_empty_wuwangluo" value="3" />
+            <enum name="cm_empty_wudingwei" value="4" />
+            <enum name="cm_empty_404" value="5" />
+            <enum name="cm_empty_success" value="6" />
+            <enum name="cm_empty_fail" value="7" />
+        </attr>
+    </declare-styleable>
+</resources>

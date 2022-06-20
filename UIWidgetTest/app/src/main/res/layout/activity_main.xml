@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.example.uiwidgettest.TitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:back="asdfasdf"
+    />
+    <com.example.uiwidgettest.TitleLayout
+        android:id="@+id/tit1leLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:back="asdf"
+    />
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+<!--    <fragment-->
+<!--        android:id="@+id/left_fragment"-->
+<!--        android:name="com.example.uiwidgettest.LeftFragment"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="1"/>-->
+<!--    <fragment-->
+<!--        android:id="@+id/right_layout"-->
+<!--        android:name="com.example.uiwidgettest.RightFragment"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="1">-->
+<!--    </fragment>-->
+</LinearLayout>
