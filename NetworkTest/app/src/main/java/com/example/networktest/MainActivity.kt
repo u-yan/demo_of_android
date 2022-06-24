@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         GlobalScope.async {
             try {
                 Log.d("TAgggG", "cnt: ?")
-                val url: URL = URL("http://www.baidu.com")
+                val url: URL = URL("http://10.0.2.2")
                 val connection: HttpURLConnection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "GET"
                 connection.connectTimeout = 8000
@@ -66,7 +66,6 @@ class MainActivity : AppCompatActivity() {
                     var reader:BufferedReader;
                     reader = BufferedReader(InputStreamReader(i_n));
                     var response:StringBuilder = StringBuilder();
-//                    line = reader.readLine()
 
                     while ( reader.readLine().also { line = it } != null) {
                         response.append(line);
