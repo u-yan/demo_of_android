@@ -8,18 +8,33 @@ import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
-    lateinit private var intentFilter: IntentFilter
-    lateinit private var networkChangeReceiver: NetworkChangeReceiver
+     var intentFilter: IntentFilter? = null
+     var networkChangeReceiver: NetworkChangeReceiver? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         intentFilter = IntentFilter()
-        intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE")
+        intentFilter?.apply {
+            addAction("android.net.conn.CONNECTIVITY_CHANGE")
+        }
         networkChangeReceiver = NetworkChangeReceiver()
         registerReceiver(networkChangeReceiver, intentFilter)
+        intentFilter = IntentFilter()
+
+        intentFilter?.apply {
+            addAction("com.example.broadcasttest.MY_BROADCAST")
+        }
+        val myBroadcastReceiver : MyBroadcastReceiver = MyBroadcastReceiver();
+        registerReceiver(myBroadcastReceiver, intentFilter)
+        var button: Button = findViewById(R.id.button)
+        button.setOnClickListener{
+            var intent: Intent = Intent("com.example.broadcasttest.MY_BROADCAST");
+            sendBroadcast(intent);
+        }
     }
     override fun onDestroy() {
         super.onDestroy()
